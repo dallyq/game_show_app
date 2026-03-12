@@ -40,3 +40,7 @@ function checkLetter () {
 function checkWin () {
 
 }
+
+// * Extra Credit *
+// Add a button to the "success" & "failure" screens
+// that resets the game
