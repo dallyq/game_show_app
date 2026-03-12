@@ -6,10 +6,6 @@ const btnReset = document.getElementsByClassName("btn-reset");
 const missed = 0;
 
 // Create an array named 'phrases'
-// Declare and initialize the phrases array, storing at least
-// five strings that contain only letters & spaces = no 
-// punctuation
-
 const phrases = [
     'Joey',
     'Pheobe',
@@ -18,3 +14,29 @@ const phrases = [
     'Rachel'
 ];
 
+// Attach an Event Listener to the "Start Game" button to hide
+// the start overlay
+.eventListener(goesHere);
+
+// Create a getRandomPhraseAsArray function
+function getRandomPhraseAsArray () {
+
+}
+
+// Create an addPhraseToDisplay function
+function addPhraseToDisplay () {
+
+}
+
+// Create a checkLetter function
+function checkLetter () {
+
+}
+
+// Add an event listener to the keyboard
+.eventListener(goesHere);
+
+// Create a checkWin function
+function checkWin () {
+
+}
