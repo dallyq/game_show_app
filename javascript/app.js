@@ -16,7 +16,7 @@ const phrases = [
 
 // Attach an Event Listener to the "Start Game" button to hide
 // the start overlay
-.eventListener(goesHere);
+eventListener(goesHere);
 
 // Create a getRandomPhraseAsArray function
 function getRandomPhraseAsArray () {
@@ -34,7 +34,7 @@ function checkLetter () {
 }
 
 // Add an event listener to the keyboard
-.eventListener(goesHere);
+eventListener(goesHere);
 
 // Create a checkWin function
 function checkWin () {
