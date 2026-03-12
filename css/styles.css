@@ -76,6 +76,8 @@ button {
 }
 
 /* Phrase */
+/* Create CSS transition for each letter in the
+phrase display as they are revealed on screen */
 
 .letter {
   font-size: var(--font-size-medium);
@@ -161,3 +163,4 @@ button {
 .lose a {
   color: var(--color-lose);
 }
+
