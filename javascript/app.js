@@ -7,11 +7,11 @@ const missed = 0;
 
 // Create an array named 'phrases'
 const phrases = [
-    'Joey',
-    'Pheobe',
-    'Chandler',
-    'Monica',
-    'Rachel'
+    'Joey Tribbiani',
+    'Pheobe Buffay',
+    'Chandler Bing',
+    'Monica Geller',
+    'Rachel Green'
 ];
 
 // Attach an Event Listener to the "Start Game" button to hide
