@@ -16,12 +16,17 @@ const phrases = [
 
 // Attach an Event Listener to the "Start Game" button to hide
 // the start overlay
-eventListener(goesHere);
+
+//const startGame = .btn__reset;
+//$(btn__reset).hide();
+//eventListener(goesHere);
 
 // Create a getRandomPhraseAsArray function
-function getRandomPhraseAsArray () {
+function getRandomPhraseAsArray (lengthArray, indexArray) {
 
 }
+
+getRandomPhraseAsArray(phrases);
 
 // Create an addPhraseToDisplay function
 function addPhraseToDisplay () {
