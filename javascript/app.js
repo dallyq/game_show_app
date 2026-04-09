@@ -14,12 +14,44 @@ const phrases = [
     'Rachel Green'
 ];
 
+// return a random phrase from an array
+const getRandomPhraseAsArray = arr => {
+
+}
+
+// adds the letters of a string to the display
+const addPhraseToDisplay = arr => {
+
+}
+
+// check if a letter is in the phrase
+const checkLetter = button => {
+
+}
+
+// check if the game has been won or lost
+const checkWin = () => {
+
+}
+
+// listen for the start game button to be pressed
+startButton.addEventListener('click', () => {
+
+});
+
+// listen for the onscreen keyboard to be clicked 
+qwerty.addEventListener('click', e => {
+
+});
+
 // Attach an Event Listener to the "Start Game" button to hide
 // the start overlay
 
-//const startGame = .btn__reset;
-//$(btn__reset).hide();
-//eventListener(goesHere);
+const startButton = document.getElementsByClassName("btn__reset")[0];
+
+startButton.addEventListener("click", function() {
+  document.querySelector(".btn__reset").style.display = "none";
+});
 
 // Create a getRandomPhraseAsArray function
 function getRandomPhraseAsArray (lengthArray, indexArray) {
@@ -29,12 +61,12 @@ function getRandomPhraseAsArray (lengthArray, indexArray) {
 getRandomPhraseAsArray(phrases);
 
 // Create an addPhraseToDisplay function
-function addPhraseToDisplay () {
+//function addPhraseToDisplay (let i = 0; i < arr.length; i++) {
 
-}
+//}
 
 // Create a checkLetter function
-function checkLetter () {
+function checkLetter (clickedButton) {
 
 }
 
