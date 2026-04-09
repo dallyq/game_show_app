@@ -28,6 +28,8 @@ function getRandomPhraseAsArray (lengthArray, indexArray) {
   // still trying to figure out what this is for ? I need to add a comment here.
 }
 
+const randomNum = getRandomPhraseAsArray.length;
+
 getRandomPhraseAsArray(phrases);
 
 // Create an addPhraseToDisplay function
