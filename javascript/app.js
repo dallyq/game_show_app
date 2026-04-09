@@ -1,7 +1,10 @@
 // Add needed variables
+// get the element with the id of qwerty and save it to a variable
 const qwerty = document.getElementById("qwerty");
+// get the element with the id of phrase and save it to a variable
 const phrase = document.getElementById("phrase");
-const btnReset = document.getElementsByClassName("btn-reset");
+// get the element with the class of btn__reset and save it to a variable
+const btnReset = document.getElementsByClassName("btn__reset");
 // Double check that 'missed' is correct
 const missed = 0;
 
