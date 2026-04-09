@@ -14,6 +14,44 @@ const phrases = [
     'Rachel Green'
 ];
 
+// Attach an Event Listener to the "Start Game" button to hide
+// the start overlay
+
+const startButton = document.getElementsByClassName("btn__reset")[0];
+
+startButton.addEventListener("click", function() {
+  document.querySelector(".btn__reset").style.display = "none";
+});
+
+// Create a getRandomPhraseAsArray function
+function getRandomPhraseAsArray (lengthArray, indexArray) {
+  // still trying to figure out what this is for ? I need to add a comment here.
+}
+
+getRandomPhraseAsArray(phrases);
+
+// Create an addPhraseToDisplay function
+//function addPhraseToDisplay (let i = 0; i < arr.length; i++) {
+
+//}
+
+// Create a checkLetter function
+function checkLetter (clickedButton) {
+
+}
+
+// Add an event listener to the keyboard
+eventListener(goesHere);
+
+// Create a checkWin function
+function checkWin () {
+
+}
+
+// * Extra Credit *
+// Add a button to the "success" & "failure" screens
+// that resets the game
+
 // return a random phrase from an array
 const getRandomPhraseAsArray = arr => {
 
@@ -43,41 +81,3 @@ startButton.addEventListener('click', () => {
 qwerty.addEventListener('click', e => {
 
 });
-
-// Attach an Event Listener to the "Start Game" button to hide
-// the start overlay
-
-const startButton = document.getElementsByClassName("btn__reset")[0];
-
-startButton.addEventListener("click", function() {
-  document.querySelector(".btn__reset").style.display = "none";
-});
-
-// Create a getRandomPhraseAsArray function
-function getRandomPhraseAsArray (lengthArray, indexArray) {
-
-}
-
-getRandomPhraseAsArray(phrases);
-
-// Create an addPhraseToDisplay function
-//function addPhraseToDisplay (let i = 0; i < arr.length; i++) {
-
-//}
-
-// Create a checkLetter function
-function checkLetter (clickedButton) {
-
-}
-
-// Add an event listener to the keyboard
-eventListener(goesHere);
-
-// Create a checkWin function
-function checkWin () {
-
-}
-
-// * Extra Credit *
-// Add a button to the "success" & "failure" screens
-// that resets the game
