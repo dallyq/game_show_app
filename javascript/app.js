@@ -1,61 +1,126 @@
-// Add needed variables
+// ADD NEEDED VARIABLES
 // get the element with the id of qwerty and save it to a variable
 const qwerty = document.getElementById("qwerty");
 // get the element with the id of phrase and save it to a variable
 const phrase = document.getElementById("phrase");
 // get the element with the class of btn__reset and save it to a variable
 const btnReset = document.getElementsByClassName("btn__reset");
-// Double check that 'missed' is correct
+// create a missed variable, initialized to 0, that you'll use later to
+// keep track of the no of guesses the player has missed - 5 wrongs &
+// they lose
 const missed = 0;
 
-// Create an array named 'phrases'
+// CREATE AN ARRAY NAMED PHRASES
+// store at least 5 strings that contain only letters & spaces, with
+// no punctuation
 const phrases = [
     'Joey Tribbiani',
     'Pheobe Buffay',
     'Chandler Bing',
     'Monica Geller',
-    'Rachel Green'
+    'Rachel Green',
+    'Ross Geller'
 ];
 
-// Attach an Event Listener to the "Start Game" button to hide
-// the start overlay
-
-const startButton = document.getElementsByClassName("btn__reset")[0];
-
+// ATTACH AN EVENT LISTENER TO THE "START GAME" BUTTON TO HIDE THE START
+// SCREEN OVERLAY
+// add the event listener to the variable you created for the btn__reset
 startButton.addEventListener("click", function() {
+// hide the overlay by changing its display property
   document.querySelector(".btn__reset").style.display = "none";
 });
 
-// Create a getRandomPhraseAsArray function
+// CREATE A GETRANDOMPHRASEASARRAY FUNCTION
+// create a function "stub", declare function & parameters, leave function
+// blank. Add code comment to describe the purpose of function
 function getRandomPhraseAsArray (lengthArray, indexArray) {
-  // still trying to figure out what this is for ? I need to add a comment here.
+  // add a comment here.
 }
-
+// create a variable to store a random number based on the length of the array
 const randomNum = getRandomPhraseAsArray.length;
+// use the variable to select an index inside of the array
 
-getRandomPhraseAsArray(phrases);
+// after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
+// the phrases array to it
+getRandomPhraseAsArray(phrases[1]);
+// return the array element at that index
 
-// Create an addPhraseToDisplay function
-//function addPhraseToDisplay (let i = 0; i < arr.length; i++) {
+console.log(getRandomPhraseAsArray);
 
-//}
+// CREATE AN ADDPHRASETODISPLAY FUNCTION
+// get it to loop through an array of characters. You'll need to write it so 
+// that it can take any array of letters and add it to the display
+function addPhraseToDisplay (phrases) {
+  let items = '';
+  for ( let i = 0; i < phrases.length; i++ ) {
 
-// Create a checkLetter function
+  }
+// inside the loop, for each character in the array:
+// 1. create a list li item
+// 2. put the character inside of the list item
+// 3. append that list item to the #phrase ul in your HTML
+// 4. if the character in the array is a letter and not a space, the function
+// should add the class "letter" to the list item. if not, add "space" class
+}
+// to use the function, you'll get the value returned by the getRandomPhraseAsArray,
+// save it to a variable, and pass it to addPhraseToDisplay as an argument
+
+
+// CREATE A CHECKLETTER FUNCTION
+// create a "stub" for the checkLetter function
+// 1. include a parameter in the function head for the button that gets clicked
 function checkLetter (clickedButton) {
+// store all of the li elements in a variable inside checkLetter
 
+// create a variable to store if a match is found & give it an initial value 
+// of null
+
+// loop through all of the li elements
+
+// 1. create a conditional that compares the text of the button parameter to 
+// the text of the li at the current index of the loop
+// - if they match, add the "show" class to the li
+// - if they match, store the button to text in the match variable
+
+// once the loop completes, return the match variable
 }
 
-// Add an event listener to the keyboard
-eventListener(goesHere);
+// ADD AN EVENT LISTENER TO THE KEYBOARD
+// start by creating an event listener for the qwerty element that listens
+// for the 'click' event
 
-// Create a checkWin function
+// use a conditional to filter out clicks that don't happen on the buttons
+// or if the button already has the "chosen" class
+// 1. add the "chosen" class to the button that was pressed
+// 2. call the checkLetter function & store the results in a variable
+// 3. if the checkLetter function doesn't find a letter, remove one of the
+// heart images and increment the missed counter
+
+// CREATE A CHECKWIN FUNCTION
 function checkWin () {
+// create a variable to store the li elements that have the class name "letter"
 
+// create a variable to store the li elements that have the class name "show"
+
+// check if the length of the 2 variables are the same, if they are, display 
+// the win overlay
+// 1. create the win overlay by adding the "win" class to the start overlay
+// 2. change the headline text of the start overlay to show a person won
+// 3. change the display property of the overlay to "flex"
+
+// check if the missed counter is greater than 4. if they are, display the lose 
+// overlay
+// 1. create the lose overlay by adding the "lose" class to the start overlay
+// 2. change the headline text of the start overlay to show a person lost
+// 3. change the display property of the overlay to "flex"
 }
 
 // * Extra Credit *
-// Add a button to the "success" & "failure" screens
-// that resets the game
+// Add a button to the "success" & "failure" screens that resets the game
+
+
+// CODE BELOW
+// is from the image attached as examples in 'Succeed'ing 
 
 // return a random phrase from an array
 const getRandomPhraseAsArray = arr => {
