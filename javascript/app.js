@@ -37,8 +37,9 @@ function getRandomPhraseAsArray (lengthArray, indexArray) {
   // add a comment here.
 }
 // create a variable to store a random number based on the length of the array
-const randomNum = getRandomPhraseAsArray.length;
+const randomNum = Math.floor(Math.random() * getRandomPhraseAsArray.length);
 // use the variable to select an index inside of the array
+const randomItem = [getRandomPhraseAsArray.randomNum];
 
 // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
 // the phrases array to it
@@ -50,10 +51,9 @@ console.log(getRandomPhraseAsArray);
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
 // get it to loop through an array of characters. You'll need to write it so 
 // that it can take any array of letters and add it to the display
-function addPhraseToDisplay (phrases) {
-  let items = '';
-  for ( let i = 0; i < phrases.length; i++ ) {
-
+function addPhraseToDisplay (arr) {
+  for ( let i = 0; i < arr.length; i++ ) {
+    document.
   }
 // inside the loop, for each character in the array:
 // 1. create a list li item
