@@ -40,9 +40,10 @@ function getRandomPhraseAsArray (randomNum) {
 }
 // create a variable to store a random number based on the length of the array
 const randomNum = Math.floor(Math.random() * phrases.length);
-console.log(randomNum);
 // use the variable to select an index inside of the array
-const randomItem = [getRandomPhraseAsArray.length];
+
+
+//*Correct up to here!
 
 // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
 // the phrases array to it
@@ -71,13 +72,18 @@ function addPhraseToDisplay (arr) {
 // CREATE A CHECKLETTER FUNCTION
 // create a "stub" for the checkLetter function
 // 1. include a parameter in the function head for the button that gets clicked
-//function checkLetter (clickedButton) {
-// store all of the li elements in a variable inside checkLetter
-
-// create a variable to store if a match is found & give it an initial value 
-// of null
-
-// loop through all of the li elements
+function checkLetter () {
+  // store all of the li elements in a variable inside checkLetter
+  const liElements = document.addQuerySelectorAll('li');
+  // create a variable to store if a match is found & give it an initial value 
+  // of null
+  const matchFound = null;
+  // loop through all of the li elements
+  for ( let i = 0; i < liElements.length; i++ ) {
+    liElements;
+  }
+  return liElements;
+};
 
 // 1. create a conditional that compares the text of the button parameter to 
 // the text of the li at the current index of the loop
