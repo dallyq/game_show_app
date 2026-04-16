@@ -24,36 +24,38 @@ const phrases = [
 
 // ATTACH AN EVENT LISTENER TO THE "START GAME" BUTTON TO HIDE THE START
 // SCREEN OVERLAY
+const startButton = document.querySelector(".btn__reset");
 // add the event listener to the variable you created for the btn__reset
-startButton.addEventListener("click", function() {
+startButton.addEventListener("click", (e) => {
 // hide the overlay by changing its display property
   document.querySelector(".btn__reset").style.display = "none";
 });
 
+
 // CREATE A GETRANDOMPHRASEASARRAY FUNCTION
 // create a function "stub", declare function & parameters, leave function
 // blank. Add code comment to describe the purpose of function
-function getRandomPhraseAsArray (lengthArray, indexArray) {
-  // add a comment here.
+function getRandomPhraseAsArray (randomNum) {
+  // add a comment here
 }
 // create a variable to store a random number based on the length of the array
-const randomNum = Math.floor(Math.random() * getRandomPhraseAsArray.length);
+const randomNum = Math.floor(Math.random() * phrases.length);
+console.log(randomNum);
 // use the variable to select an index inside of the array
-const randomItem = [getRandomPhraseAsArray.randomNum];
+const randomItem = [getRandomPhraseAsArray.length];
 
 // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
 // the phrases array to it
-getRandomPhraseAsArray(phrases[1]);
+getRandomPhraseAsArray(phrases);
 // return the array element at that index
 
-console.log(getRandomPhraseAsArray);
 
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
 // get it to loop through an array of characters. You'll need to write it so 
 // that it can take any array of letters and add it to the display
 function addPhraseToDisplay (arr) {
   for ( let i = 0; i < arr.length; i++ ) {
-    document.
+    
   }
 // inside the loop, for each character in the array:
 // 1. create a list li item
@@ -69,7 +71,7 @@ function addPhraseToDisplay (arr) {
 // CREATE A CHECKLETTER FUNCTION
 // create a "stub" for the checkLetter function
 // 1. include a parameter in the function head for the button that gets clicked
-function checkLetter (clickedButton) {
+//function checkLetter (clickedButton) {
 // store all of the li elements in a variable inside checkLetter
 
 // create a variable to store if a match is found & give it an initial value 
@@ -83,7 +85,7 @@ function checkLetter (clickedButton) {
 // - if they match, store the button to text in the match variable
 
 // once the loop completes, return the match variable
-}
+//}
 
 // ADD AN EVENT LISTENER TO THE KEYBOARD
 // start by creating an event listener for the qwerty element that listens
@@ -123,31 +125,31 @@ function checkWin () {
 // is from the image attached as examples in 'Succeed'ing 
 
 // return a random phrase from an array
-const getRandomPhraseAsArray = arr => {
+// const getRandomPhraseAsArray = arr => {
 
-}
+//}
 
 // adds the letters of a string to the display
-const addPhraseToDisplay = arr => {
+//const addPhraseToDisplay = arr => {
 
-}
+//}
 
 // check if a letter is in the phrase
-const checkLetter = button => {
+//const checkLetter = button => {
 
-}
+//}
 
 // check if the game has been won or lost
-const checkWin = () => {
+//const checkWin = () => {
 
-}
+//}
 
 // listen for the start game button to be pressed
-startButton.addEventListener('click', () => {
+//startButton.addEventListener('click', () => {
 
-});
+//});
 
 // listen for the onscreen keyboard to be clicked 
-qwerty.addEventListener('click', e => {
+//qwerty.addEventListener('click', e => {
 
-});
+//});
