@@ -15,12 +15,12 @@ const missed = 0;
 // store at least 5 strings that contain only letters & spaces, with
 // no punctuation
 const phrases = [
-    'Joey Tribbiani',
-    'Pheobe Buffay',
-    'Chandler Bing',
-    'Monica Geller',
-    'Rachel Green',
-    'Ross Geller'
+    "Joey Tribbiani",
+    "Pheobe Buffay",
+    "Chandler Bing",
+    "Monica Geller",
+    "Rachel Green",
+    "Ross Geller"
 ];
 
 
@@ -74,7 +74,7 @@ function addPhraseToDisplay (arr) {
   // include a parameter in the function head for the button that gets clicked
 function checkLetter (e) {
 // store all of the li elements in a variable inside checkLetter
-  const liElements = document.addQuerySelectorAll('');
+  const liElements = document.addQuerySelectorAll("");
 // create a variable to store if a match is found & give it an initial value 
 // of null
   let matchFound = null;
@@ -122,28 +122,8 @@ function checkWin () {
 // Add a button to the "success" & "failure" screens that resets the game
 
 
-// CODE BELOW
-// is from the image attached as examples in 'Succeed'ing 
-
-// return a random phrase from an array
-// const getRandomPhraseAsArray = arr => {
-
-//}
-
-// adds the letters of a string to the display
-//const addPhraseToDisplay = arr => {
-
-//}
-
 // check if a letter is in the phrase
-//const checkLetter = button => {
 
-//}
-
-// check if the game has been won or lost
-//const checkWin = () => {
-
-//}
 
 // listen for the start game button to be pressed
 //startButton.addEventListener('click', () => {
