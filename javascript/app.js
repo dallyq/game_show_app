@@ -10,6 +10,7 @@ const btnReset = document.getElementsByClassName("btn__reset");
 // they lose
 const missed = 0;
 
+
 // CREATE AN ARRAY NAMED PHRASES
 // store at least 5 strings that contain only letters & spaces, with
 // no punctuation
@@ -21,6 +22,7 @@ const phrases = [
     'Rachel Green',
     'Ross Geller'
 ];
+
 
 // ATTACH AN EVENT LISTENER TO THE "START GAME" BUTTON TO HIDE THE START
 // SCREEN OVERLAY
@@ -41,10 +43,6 @@ function getRandomPhraseAsArray () {
 // create a variable to store a random number based on the length of the array
 const randomNum = Math.floor(Math.random() * phrases.length);
 // use the variable to select an index inside of the array
-
-
-//*Correct up to here!
-
 // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
 // the phrases array to it
 getRandomPhraseAsArray(phrases);
@@ -61,70 +59,63 @@ function addPhraseToDisplay (arr) {
   }
   return items;
 }
-// inside the loop, for each character in the array:
-// 1. create a list li item
-// 2. put the character inside of the list item
-// 3. append that list item to the #phrase ul in your HTML
-// 4. if the character in the array is a letter and not a space, the function
-// should add the class "letter" to the list item. if not, add "space" class
-
+  // inside the loop, for each character in the array:
+    // create a list li item
+    // put the character inside of the list item
+    // append that list item to the #phrase ul in your HTML
+    // if the character in the array is a letter and not a space, the function
+    // should add the class "letter" to the list item. if not, add "space" class
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
 
 
 // CREATE A CHECKLETTER FUNCTION
 // create a "stub" for the checkLetter function
-// 1. include a parameter in the function head for the button that gets clicked
+  // include a parameter in the function head for the button that gets clicked
 function checkLetter (e) {
-  // store all of the li elements in a variable inside checkLetter
+// store all of the li elements in a variable inside checkLetter
   const liElements = document.addQuerySelectorAll('');
-  // create a variable to store if a match is found & give it an initial value 
-  // of null
+// create a variable to store if a match is found & give it an initial value 
+// of null
   let matchFound = null;
-  // loop through all of the li elements
+// loop through all of the li elements
   for ( let i = 0; i < liElements.length; i++ ) {
     console.log(liElements[i]);
   }
   return liElements;
 };
-
-
-// 1. create a conditional that compares the text of the button parameter to 
-// the text of the li at the current index of the loop
-// - if they match, add the "show" class to the li
-// - if they match, store the button to text in the match variable
-
+  // create a conditional that compares the text of the button parameter to 
+  // the text of the li at the current index of the loop
+    // - if they match, add the "show" class to the li
+    // - if they match, store the button to text in the match variable
 // once the loop completes, return the match variable
-//}
+
 
 // ADD AN EVENT LISTENER TO THE KEYBOARD
 // start by creating an event listener for the qwerty element that listens
 // for the 'click' event
-
 // use a conditional to filter out clicks that don't happen on the buttons
 // or if the button already has the "chosen" class
-// 1. add the "chosen" class to the button that was pressed
-// 2. call the checkLetter function & store the results in a variable
-// 3. if the checkLetter function doesn't find a letter, remove one of the
-// heart images and increment the missed counter
+  // add the "chosen" class to the button that was pressed
+  // call the checkLetter function & store the results in a variable
+  // if the checkLetter function doesn't find a letter, remove one of the
+  // heart images and increment the missed counter
+
 
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
 // create a variable to store the li elements that have the class name "letter"
-
 // create a variable to store the li elements that have the class name "show"
-
 // check if the length of the 2 variables are the same, if they are, display 
 // the win overlay
-// 1. create the win overlay by adding the "win" class to the start overlay
-// 2. change the headline text of the start overlay to show a person won
-// 3. change the display property of the overlay to "flex"
-
+  // create the win overlay by adding the "win" class to the start overlay
+  // change the headline text of the start overlay to show a person won
+  // change the display property of the overlay to "flex"
 // check if the missed counter is greater than 4. if they are, display the lose 
 // overlay
-// 1. create the lose overlay by adding the "lose" class to the start overlay
-// 2. change the headline text of the start overlay to show a person lost
-// 3. change the display property of the overlay to "flex"
+  // create the lose overlay by adding the "lose" class to the start overlay
+  // change the headline text of the start overlay to show a person lost
+  // change the display property of the overlay to "flex"
 }
 
 // * Extra Credit *
