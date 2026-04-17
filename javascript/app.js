@@ -94,13 +94,14 @@ function checkLetter (e) {
 // ADD AN EVENT LISTENER TO THE KEYBOARD
 // start by creating an event listener for the qwerty element that listens
 // for the 'click' event
+qwerty.addEventListener("click", function(e) {
 // use a conditional to filter out clicks that don't happen on the buttons
 // or if the button already has the "chosen" class
   // add the "chosen" class to the button that was pressed
   // call the checkLetter function & store the results in a variable
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
-
+});
 
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
@@ -118,19 +119,6 @@ function checkWin () {
   // change the display property of the overlay to "flex"
 }
 
-// * Extra Credit *
+
+// EXTRA CREDIT
 // Add a button to the "success" & "failure" screens that resets the game
-
-
-// check if a letter is in the phrase
-
-
-// listen for the start game button to be pressed
-//startButton.addEventListener('click', () => {
-
-//});
-
-// listen for the onscreen keyboard to be clicked 
-//qwerty.addEventListener('click', e => {
-
-//});
