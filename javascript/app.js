@@ -35,8 +35,8 @@ startButton.addEventListener("click", (e) => {
 // CREATE A GETRANDOMPHRASEASARRAY FUNCTION
 // create a function "stub", declare function & parameters, leave function
 // blank. Add code comment to describe the purpose of function
-function getRandomPhraseAsArray (randomNum) {
-  // add a comment here
+function getRandomPhraseAsArray () {
+  // This takes a random element from your array and breaks it down into each letter
 }
 // create a variable to store a random number based on the length of the array
 const randomNum = Math.floor(Math.random() * phrases.length);
@@ -55,16 +55,19 @@ getRandomPhraseAsArray(phrases);
 // get it to loop through an array of characters. You'll need to write it so 
 // that it can take any array of letters and add it to the display
 function addPhraseToDisplay (arr) {
+  let items = "";
   for ( let i = 0; i < arr.length; i++ ) {
-    
+    items += `<li>${arr[i]}</li>`;
   }
+  return items;
+}
 // inside the loop, for each character in the array:
 // 1. create a list li item
 // 2. put the character inside of the list item
 // 3. append that list item to the #phrase ul in your HTML
 // 4. if the character in the array is a letter and not a space, the function
 // should add the class "letter" to the list item. if not, add "space" class
-}
+
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
 
@@ -72,18 +75,19 @@ function addPhraseToDisplay (arr) {
 // CREATE A CHECKLETTER FUNCTION
 // create a "stub" for the checkLetter function
 // 1. include a parameter in the function head for the button that gets clicked
-function checkLetter () {
+function checkLetter (e) {
   // store all of the li elements in a variable inside checkLetter
-  const liElements = document.addQuerySelectorAll('li');
+  const liElements = document.addQuerySelectorAll('');
   // create a variable to store if a match is found & give it an initial value 
   // of null
-  const matchFound = null;
+  let matchFound = null;
   // loop through all of the li elements
   for ( let i = 0; i < liElements.length; i++ ) {
-    liElements;
+    console.log(liElements[i]);
   }
   return liElements;
 };
+
 
 // 1. create a conditional that compares the text of the button parameter to 
 // the text of the li at the current index of the loop
