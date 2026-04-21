@@ -53,7 +53,6 @@ getRandomPhraseAsArray(phrases);
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
 // get it to loop through an array of characters. You'll need to write it so 
 // that it can take any array of letters and add it to the display
-
 const individ = document.querySelectorAll(".keyrow button");
 
 function addPhraseToDisplay () {
