@@ -37,16 +37,20 @@ startButton.addEventListener("click", (e) => {
 // CREATE A GETRANDOMPHRASEASARRAY FUNCTION
 // create a function "stub", declare function & parameters, leave function
 // blank. Add code comment to describe the purpose of function
-function getRandomPhraseAsArray () {
-  // This takes a random element from your array and breaks it down into each letter
+function getRandomPhraseAsArray (phrases) {
+  // This takes a random element from your array
+
+  // create a variable to store a random number based on the length of the array
+  const randomNum = Math.floor(Math.random() * phrases.length);
+
+  // use the variable to select an index inside of the array
+  // return the array element at that index
+  return phrases[randomNum]; 
 }
-// create a variable to store a random number based on the length of the array
-const randomNum = Math.floor(Math.random() * phrases.length);
-// use the variable to select an index inside of the array
-// after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
-// the phrases array to it
-getRandomPhraseAsArray(phrases);
-// return the array element at that index
+
+  // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
+  // the phrases array to it
+  getRandomPhraseAsArray(phrases);
 
 
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
@@ -122,3 +126,4 @@ function checkWin () {
 
 // EXTRA CREDIT
 // Add a button to the "success" & "failure" screens that resets the game
+
