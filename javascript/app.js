@@ -38,33 +38,31 @@ startButton.addEventListener("click", (e) => {
 // create a function "stub", declare function & parameters, leave function
 // blank. Add code comment to describe the purpose of function
 function getRandomPhraseAsArray (phrases) {
-  // This takes a random element from your array
-
+  // This takes a random element from the phrases array
   // create a variable to store a random number based on the length of the array
   const randomNum = Math.floor(Math.random() * phrases.length);
-
   // use the variable to select an index inside of the array
   // return the array element at that index
   return phrases[randomNum]; 
 }
-
   // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
   // the phrases array to it
-  getRandomPhraseAsArray(phrases);
+getRandomPhraseAsArray(phrases);
 
 
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
 // get it to loop through an array of characters. You'll need to write it so 
 // that it can take any array of letters and add it to the display
-function addPhraseToDisplay (arr) {
-  let items = "";
-  for ( let i = 0; i < arr.length; i++ ) {
-    items += `<li>${arr[i]}</li>`;
-  }
-  return items;
-}
-  // inside the loop, for each character in the array:
+
+const individ = document.querySelectorAll(".keyrow button");
+
+function addPhraseToDisplay () {
+    // inside the loop, for each character in the array:
     // create a list li item
+  for (let i = 0; i < individ.length; i++)
+    console.log(individ);
+  return individ[i];
+};
     // put the character inside of the list item
     // append that list item to the #phrase ul in your HTML
     // if the character in the array is a letter and not a space, the function
