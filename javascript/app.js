@@ -53,24 +53,27 @@ getRandomPhraseAsArray(phrases);
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
 // get it to loop through an array of characters. You'll need to write it so 
 // that it can take any array of letters and add it to the display
-// const individ = document.querySelectorAll(".keyrow button");
+const letters = ["a", "b", "c",];
+const ul = document.querySelector("ul");
 
-function addPhraseToDisplay (arr) {
+function addPhraseToDisplay () {
     // inside the loop, for each character in the array:
+    for ( let i = 0; i < letters.length; i++ ) {
     // create a list li item
-    let items = "";
-    for (let i = 0; i < arr.length; i++) {
-      items += `<li>${arr[i]}</li>`;
-    }
-  return items;
-};
+    const li = document.createElement("li");
     // put the character inside of the list item
+    li.textContent = letters[i];
     // append that list item to the #phrase ul in your HTML
+    ul.append(li);
     // if the character in the array is a letter and not a space, the function
     // should add the class "letter" to the list item. if not, add "space" class
+
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
+  }
+};
 
+console.log(letters);
 
 // CREATE A CHECKLETTER FUNCTION
 // create a "stub" for the checkLetter function
