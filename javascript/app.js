@@ -58,20 +58,19 @@ const ul = document.querySelector("ul");
 
 function addPhraseToDisplay () {
     // inside the loop, for each character in the array:
-    for ( let i = 0; i < letters.length; i++ ) {
+    
     // create a list li item
-    const li = document.createElement("li");
+   
     // put the character inside of the list item
-    li.textContent = letters[i];
+  
     // append that list item to the #phrase ul in your HTML
-    ul.append(li);
+  
     // if the character in the array is a letter and not a space, the function
     // should add the class "letter" to the list item. if not, add "space" class
 
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
-  }
-};
+  };
 
 console.log(letters);
 
