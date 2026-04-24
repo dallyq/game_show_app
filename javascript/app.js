@@ -64,16 +64,16 @@ function addPhraseToDisplay (arr) {
     ul.appendChild(listItem);
     // if the character in the array is a letter and not a space, the function
     // should add the class "letter" to the list item. if not, add "space" class
-    if (arr[i] !== " , ") {
+    if (arr[i] !== " ") {
       listItem.className = "letter";
     } else {
       listItem.className = "space";
     }
-// to use the function, you'll get the value returned by the getRandomPhraseAsArray,
-// save it to a variable, and pass it to addPhraseToDisplay as an argument
-    return getRandomPhraseAsArray(addPhraseToDisplay[i]);
   }
 };
+// to use the function, you'll get the value returned by the getRandomPhraseAsArray,
+// save it to a variable, and pass it to addPhraseToDisplay as an argument
+return getRandomPhraseAsArray(addPhraseToDisplay);
 
 
 // CREATE A CHECKLETTER FUNCTION
