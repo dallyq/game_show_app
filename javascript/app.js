@@ -73,7 +73,7 @@ function addPhraseToDisplay (arr) {
 };
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
-return getRandomPhraseAsArray(addPhraseToDisplay);
+
 
 
 // CREATE A CHECKLETTER FUNCTION
@@ -81,22 +81,24 @@ return getRandomPhraseAsArray(addPhraseToDisplay);
   // include a parameter in the function head for the button that gets clicked
 function checkLetter (e) {
 // store all of the li elements in a variable inside checkLetter
-  const liElements = document.addQuerySelectorAll("");
+  const liElements = document.createElement("li");
 // create a variable to store if a match is found & give it an initial value 
 // of null
   let matchFound = null;
 // loop through all of the li elements
   for ( let i = 0; i < liElements.length; i++ ) {
-    console.log(liElements[i]);
+    // create a conditional that compares the text of the button parameter to 
+    // the text of the li at the current index of the loop
+    if {
+      // - if they match, add the "show" class to the li
+    } else {
+      
+    }
   }
-  return liElements;
 };
-  // create a conditional that compares the text of the button parameter to 
-  // the text of the li at the current index of the loop
-    // - if they match, add the "show" class to the li
     // - if they match, store the button to text in the match variable
 // once the loop completes, return the match variable
-
+console.log(liElements);
 
 // ADD AN EVENT LISTENER TO THE KEYBOARD
 // start by creating an event listener for the qwerty element that listens
