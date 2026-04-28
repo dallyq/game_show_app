@@ -94,12 +94,11 @@ function checkLetter (e) {
       // - if they match, store the button to text in the match variable
       
     }
-    // once the loop completes, return the match variable
-    return matchFound;
   }
+  // once the loop completes, return the match variable (NOT SURE IF THIS MUST BE
+  // IN THIS EXACT POSITION)
+    return matchFound;
 };
-
-console.log(checkLetter);
 
 // ADD AN EVENT LISTENER TO THE KEYBOARD
 // start by creating an event listener for the qwerty element that listens
