@@ -8,7 +8,7 @@ const btnReset = document.getElementsByClassName("btn__reset");
 // create a missed variable, initialized to 0, that you'll use later to
 // keep track of the no of guesses the player has missed - 5 wrongs &
 // they lose
-const missed = 0;
+let missed = 0;
 
 
 // CREATE AN ARRAY NAMED PHRASES
@@ -106,10 +106,15 @@ function checkLetter (e) {
 qwerty.addEventListener("click", function(e) {
 // use a conditional to filter out clicks that don't happen on the buttons
 // or if the button already has the "chosen" class
+  if ( "click" === button  ) {
   // add the "chosen" class to the button that was pressed
+    document.e.target.classList.add();
   // call the checkLetter function & store the results in a variable
+    let result = checkLetter(...);
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
+
+  }
 });
 
 // CREATE A CHECKWIN FUNCTION
