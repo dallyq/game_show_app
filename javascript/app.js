@@ -61,7 +61,7 @@ function addPhraseToDisplay (arr) {
     // put the character inside of the list item
     listItem.textContent = `${arr[i]}`;
     // append that list item to the #phrase ul in your HTML
-    ul.appendChild(listItem);
+    document.getElementById("phrase").appendChild(listItem);
     // if the character in the array is a letter and not a space, the function
     // should add the class "letter" to the list item. if not, add "space" class
     if (arr[i] !== " ") {
@@ -73,7 +73,6 @@ function addPhraseToDisplay (arr) {
 };
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
-
 
 
 // CREATE A CHECKLETTER FUNCTION
@@ -89,16 +88,18 @@ function checkLetter (e) {
   for ( let i = 0; i < liElements.length; i++ ) {
     // create a conditional that compares the text of the button parameter to 
     // the text of the li at the current index of the loop
-    if {
+    if ( e.target.value ===  liElements[i] )  {
       // - if they match, add the "show" class to the li
-    } else {
+      li.className = "show";
+      // - if they match, store the button to text in the match variable
       
     }
+    // once the loop completes, return the match variable
+    return matchFound;
   }
 };
-    // - if they match, store the button to text in the match variable
-// once the loop completes, return the match variable
-console.log(liElements);
+
+console.log(checkLetter);
 
 // ADD AN EVENT LISTENER TO THE KEYBOARD
 // start by creating an event listener for the qwerty element that listens
