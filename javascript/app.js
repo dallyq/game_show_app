@@ -106,16 +106,18 @@ function checkLetter (e) {
 qwerty.addEventListener("click", function(e) {
 // use a conditional to filter out clicks that don't happen on the buttons
 // or if the button already has the "chosen" class
-  if ( "click" === button  ) {
+  if ( e.target.tagName === "BUTTON" && e.target.className === "letter" ) {
   // add the "chosen" class to the button that was pressed
-    document.e.target.classList.add();
+    
   // call the checkLetter function & store the results in a variable
-    let result = checkLetter(...);
+    let result = checkLetter();
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
 
   }
 });
+
+console.log(e.type);
 
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
