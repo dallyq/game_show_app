@@ -122,20 +122,35 @@ console.log(e.type);
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
 // create a variable to store the li elements that have the class name "letter"
+  const liLetters = document.getElementByClassName('letter');
 // create a variable to store the li elements that have the class name "show"
-// check if the length of the 2 variables are the same, if they are, display 
-// the win overlay
-  // create the win overlay by adding the "win" class to the start overlay
-  // change the headline text of the start overlay to show a person won
-  // change the display property of the overlay to "flex"
+ const liShow = document.getElementByClassName('show');
+// check if the length of the 2 variables are the same, 
+// if they are, display the win overlay
+  if (liLetters.length === liShow.length) {
+    overlay.style.display = "block";
+    // create the win overlay by adding the "win" class to the start overlay
+    overlay.className = "win";
+    // change the headline text of the start overlay to show a person won
+    
+    // change the display property of the overlay to "flex"
+
 // check if the missed counter is greater than 4. if they are, display the lose 
 // overlay
-  // create the lose overlay by adding the "lose" class to the start overlay
+  }
+  if ( missed > 4 ) {
+   // create the lose overlay by adding the "lose" class to the start overlay
+  
   // change the headline text of the start overlay to show a person lost
+
   // change the display property of the overlay to "flex"
-}
+
+  }
+};
 
 
 // EXTRA CREDIT
 // Add a button to the "success" & "failure" screens that resets the game
+
+
 
