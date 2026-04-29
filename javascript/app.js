@@ -75,6 +75,7 @@ function addPhraseToDisplay (arr) {
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
 
 
+
 // CREATE A CHECKLETTER FUNCTION
 // create a "stub" for the checkLetter function
   // include a parameter in the function head for the button that gets clicked
@@ -117,7 +118,6 @@ qwerty.addEventListener("click", function(e) {
   }
 });
 
-console.log(e.type);
 
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
@@ -132,7 +132,7 @@ function checkWin () {
     // create the win overlay by adding the "win" class to the start overlay
     overlay.className = "win";
     // change the headline text of the start overlay to show a person won
-    
+
     // change the display property of the overlay to "flex"
 
 // check if the missed counter is greater than 4. if they are, display the lose 
