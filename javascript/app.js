@@ -109,12 +109,12 @@ qwerty.addEventListener("click", function(e) {
 // or if the button already has the "chosen" class
   if ( e.target.tagName === "BUTTON" && e.target.className === "letter" ) {
   // add the "chosen" class to the button that was pressed
-    
+    e.target.className = "chosen";
   // call the checkLetter function & store the results in a variable
-    let result = checkLetter();
+    let resultss = checkLetter();
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
-
+    checkLetter =! 
   }
 });
 
@@ -132,7 +132,7 @@ function checkWin () {
     // create the win overlay by adding the "win" class to the start overlay
     overlay.className = "win";
     // change the headline text of the start overlay to show a person won
-
+    document.btn__reset.textContent = "You won!";
     // change the display property of the overlay to "flex"
 
 // check if the missed counter is greater than 4. if they are, display the lose 
