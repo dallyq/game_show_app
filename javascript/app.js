@@ -30,7 +30,7 @@ const startButton = document.querySelector(".btn__reset");
 // add the event listener to the variable you created for the btn__reset
 startButton.addEventListener("click", (e) => {
 // hide the overlay by changing its display property
-  document.querySelector(".btn__reset").style.display = "none";
+  document.querySelector("#overlay").style.display = "none";
 });
 
 
@@ -47,7 +47,7 @@ function getRandomPhraseAsArray (phrases) {
 }
   // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
   // the phrases array to it
-getRandomPhraseAsArray(phrases);
+const randomPhrase = getRandomPhraseAsArray(phrases);
 
 
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
@@ -73,6 +73,7 @@ function addPhraseToDisplay (arr) {
 };
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument
+addPhraseToDisplay(randomPhrase);
 
 
 
