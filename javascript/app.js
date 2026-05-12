@@ -76,7 +76,6 @@ function addPhraseToDisplay (arr) {
 addPhraseToDisplay(randomPhrase);
 
 
-
 // CREATE A CHECKLETTER FUNCTION
 // create a "stub" for the checkLetter function
   // include a parameter in the function head for the button that gets clicked
@@ -115,7 +114,8 @@ qwerty.addEventListener("click", function(e) {
     let resultss = checkLetter();
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
-    
+  } else {
+    ol.remove('li');
   }
 });
 
