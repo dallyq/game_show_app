@@ -115,13 +115,12 @@ qwerty.addEventListener("click", function(e) {
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
     if ( resultss === false ) {
-        missed +=1;
-        ol.remove('li'); 
+      li.removeChild('img'); 
+      missed +=1;
     }
   }
 });
 
-console.log(e);
 
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
@@ -138,7 +137,7 @@ function checkWin () {
     // change the headline text of the start overlay to show a person won
     document.btn__reset.textContent = "You won!";
     // change the display property of the overlay to "flex"
-
+    document.getElementById("overlay").style.display = "flex";
 // check if the missed counter is greater than 4. if they are, display the lose 
 // overlay
   }
