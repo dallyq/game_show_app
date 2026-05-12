@@ -114,7 +114,7 @@ qwerty.addEventListener("click", function(e) {
     let resultss = checkLetter();
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
-    if ( resultss !== e ) {
+    if ( resultss !== "letter" ) {
         ol.remove('li');
     }
   }
