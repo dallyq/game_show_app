@@ -116,7 +116,7 @@ qwerty.addEventListener("click", function(e) {
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
     if ( resultss === null ) {
-      
+      li.removeChild();
       missed +=1;
     }
   }
@@ -132,6 +132,7 @@ function checkWin () {
 // check if the length of the 2 variables are the same, if they are, display the
 // win overlay
   if ( liLetters.length === liShow.length ) {
+    document.getElementById("overlay").style.display = "block";
     // create the win overlay by adding the "win" class to the start overlay
     document.getElementById("overlay").className = "win";
     // change the headline text of the start overlay to show a person won
@@ -149,6 +150,7 @@ function checkWin () {
     // change the display property of the overlay to "flex"
 
   }
+  return checkWin();
 };
 
 
