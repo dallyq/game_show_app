@@ -130,7 +130,7 @@ function checkWin () {
  const liShow = document.getElementByClassName('show');
 // check if the length of the 2 variables are the same, 
 // if they are, display the win overlay
-  if (liLetters.length === liShow.length) {
+  if ( liLetters.length === liShow.length ) {
     overlay.style.display = "block";
     // create the win overlay by adding the "win" class to the start overlay
     overlay.className = "win";
@@ -142,11 +142,11 @@ function checkWin () {
 // overlay
   }
   if ( missed > 4 ) {
-   // create the lose overlay by adding the "lose" class to the start overlay
-  
-  // change the headline text of the start overlay to show a person lost
-
-  // change the display property of the overlay to "flex"
+    // create the lose overlay by adding the "lose" class to the start overlay
+    document.getElementsByClassName("start").className = "lose";
+    // change the headline text of the start overlay to show a person lost
+    
+    // change the display property of the overlay to "flex"
 
   }
 };
