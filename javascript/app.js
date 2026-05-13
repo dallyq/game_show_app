@@ -77,14 +77,14 @@ function addPhraseToDisplay (arr) {
 addPhraseToDisplay(randomPhrase);
 
 
-// CREATE A CHECKLETTER FUNCTION
-// create a "stub" for the checkLetter function A STUB IS AN EMPTY FUNCTION TO START WITH
+// CREATE A CHECKLETTER FUNCTION - THE PURPOSE OF THIS IS SO THAT IT CAN DISPLAY 
+// create a "stub" for the checkLetter function
   // include a parameter in the function head for the button that gets clicked 
 function checkLetter (e) {
-// store all of the li elements in a variable inside checkLetter
+// store all of the li elements in a variable inside checkLetter LI CREATED FROM ADDPHRASETODISPLAY
   const liElements = document.querySelectorAll("li");
 // create a variable to store if a match is found & give it an initial value 
-// of null
+// of null 
   let matchFound = null;
 // loop through all of the li elements
   for ( let i = 0; i < liElements.length; i++ ) {
