@@ -46,39 +46,40 @@ function getRandomPhraseAsArray (phrases) {
   return phrases[randomNum];  
 }
   // after you create getRandomPhraseAsArray, you will need to 'call' it, 
-  // & pass the phrases array to it
+  // & pass the phrases array to it THIS CREATES ARGUMENTS STORED INSIDE A VARIABLE
 const randomPhrase = getRandomPhraseAsArray(phrases);
 
 
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
 // get it to loop through an array of characters. You'll need to write it so 
-// that it can take any array of letters and add it to the display
+// that it can take any array of letters and add it to the display THIS JUMBLES UP WHAT IS DISPLAYED ON PAGE
 function addPhraseToDisplay (arr) {
-    // inside the loop, for each character in the array:
+    // inside the loop, for each character in the array: THIS LOOPS THROUGH THE ARRAY
     for ( let i = 0; i < arr.length; i++ ) {
-    // create a list li item
-    const listItem = document.createElement("li");
-    // put the character inside of the list item
+    // create a list li item THIS CREATES A LIST ITEM
+    const listItem = document.createElement("li"); 
+    // put the character inside of the list item PUTS THE NAME OF CHARACTER IN LI
     listItem.textContent = `${arr[i]}`;
-    // append that list item to the #phrase ul in your HTML
-    document.getElementById("phrase").appendChild(listItem);
-    // if the character in the array is a letter and not a space, the function
+    // append that list item to the #phrase ul in your HTML THIS PUTS THE ARRAY INTO THE PHRASE ID
+    document.getElementById("phrase").appendChild(listItem); 
+    // if the character in the array is a letter and not a space, the function 
     // should add the class "letter" to the list item. if not, add "space" class
     if (arr[i] !== " ") {
-      listItem.className = "letter";
+      listItem.className = "letter"; // GETS STYLED AS A BLANK TILE
     } else {
-      listItem.className = "space";
+      listItem.className = "space"; // GETS STYLED AS AN INVISIBLE/EMPTY GAP
     }
   }
 };
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
-// save it to a variable, and pass it to addPhraseToDisplay as an argument
+// save it to a variable, and pass it to addPhraseToDisplay as an argument THIS GIVES
+// THE ARRAY OF CHARACTERS TO LOOP THROUGH
 addPhraseToDisplay(randomPhrase);
 
 
 // CREATE A CHECKLETTER FUNCTION
-// create a "stub" for the checkLetter function
-  // include a parameter in the function head for the button that gets clicked
+// create a "stub" for the checkLetter function A STUB IS AN EMPTY FUNCTION TO START WITH
+  // include a parameter in the function head for the button that gets clicked 
 function checkLetter (e) {
 // store all of the li elements in a variable inside checkLetter
   const liElements = document.querySelectorAll("li");
@@ -115,7 +116,7 @@ qwerty.addEventListener("click", function(e) {
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
     if ( resultss === null ) {
-      document.querySelector('.tries img').remove();
+      document.querySelector('img').remove();
       missed +=1;
     }
   }
