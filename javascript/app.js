@@ -81,7 +81,7 @@ addPhraseToDisplay(randomPhrase);
   // include a parameter in the function head for the button that gets clicked
 function checkLetter (e) {
 // store all of the li elements in a variable inside checkLetter
-  const liElements = document.createElement("li");
+  const liElements = document.querySelectorAll("li");
 // create a variable to store if a match is found & give it an initial value 
 // of null
   let matchFound = null;
@@ -93,7 +93,7 @@ function checkLetter (e) {
       // - if they match, add the "show" class to the li
       li.className = "show";
       // - if they match, store the button to text in the match variable
-      
+      matchFound = e.target.value;
     }
   }
   // once the loop completes, return the match variable (NOT SURE IF THIS MUST BE
@@ -145,7 +145,7 @@ function checkWin () {
     // create the lose overlay by adding the "lose" class to the start overlay
     document.getElementsByClassName("start").className = "lose";
     // change the headline text of the start overlay to show a person lost
-    
+   
     // change the display property of the overlay to "flex"
 
   }
