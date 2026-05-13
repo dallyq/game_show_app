@@ -116,7 +116,7 @@ qwerty.addEventListener("click", function(e) {
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
     if ( resultss === null ) {
-      li.removeChild();
+      document.querySelector('img').remove();
       missed +=1;
     }
   }
