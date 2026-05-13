@@ -1,19 +1,19 @@
 // ADD NEEDED VARIABLES
-// get the element with the id of qwerty and save it to a variable
+// get the element with the id of qwerty and save it to a variable FOR LETTER BUTTONS
 const qwerty = document.getElementById("qwerty");
-// get the element with the id of phrase and save it to a variable
+// get the element with the id of phrase and save it to a variable FOR UNORDERED LIST (EMPTY)
 const phrase = document.getElementById("phrase");
-// get the element with the class of btn__reset and save it to a variable
+// get the element with the class of btn__reset and save it to a variable START GAME TEXT
 const btnReset = document.getElementsByClassName("btn__reset");
 // create a missed variable, initialized to 0, that you'll use later to
 // keep track of the no of guesses the player has missed - 5 wrongs &
-// they lose
+// they lose GUESSES COUNTER
 let missed = 0;
 
 
 // CREATE AN ARRAY NAMED PHRASES
 // store at least 5 strings that contain only letters & spaces, with
-// no punctuation
+// no punctuation THIS IS WHAT PEOPLE WILL BE GUESSING
 const phrases = [
     "Joey Tribbiani",
     "Pheobe Buffay",
@@ -25,28 +25,28 @@ const phrases = [
 
 
 // ATTACH AN EVENT LISTENER TO THE "START GAME" BUTTON TO HIDE THE START
-// SCREEN OVERLAY
+// SCREEN OVERLAY (THIS STARTS GAME)
 const startButton = document.querySelector(".btn__reset");
-// add the event listener to the variable you created for the btn__reset
+// add the event listener to the variable you created for the btn__reset HAPPENS WHEN CLICKED
 startButton.addEventListener("click", (e) => {
-// hide the overlay by changing its display property
+// hide the overlay by changing its display property THIS REMOVES OVERLAY
   document.querySelector("#overlay").style.display = "none";
 });
 
 
 // CREATE A GETRANDOMPHRASEASARRAY FUNCTION
 // create a function "stub", declare function & parameters, leave function
-// blank. Add code comment to describe the purpose of function
+// blank. Add code comment to describe the purpose of function THIS MAKES THE SELECTED LETTERS RANDOM
 function getRandomPhraseAsArray (phrases) {
-  // This takes a random element from the phrases array
-  // create a variable to store a random number based on the length of the array
-  const randomNum = Math.floor(Math.random() * phrases.length);
+  // This takes a random element from the phrases array create a variable 
+  // to store a random number based on the length of the array RANDOMIZES
+  const randomNum = Math.floor(Math.random() * phrases.length); 
   // use the variable to select an index inside of the array
-  // return the array element at that index
-  return phrases[randomNum]; 
+  // return the array element at that index RETURNS RESULT OF FUNCTION
+  return phrases[randomNum];  
 }
-  // after you create getRandomPhraseAsArray, you will need to 'call' it, & pass
-  // the phrases array to it
+  // after you create getRandomPhraseAsArray, you will need to 'call' it, 
+  // & pass the phrases array to it
 const randomPhrase = getRandomPhraseAsArray(phrases);
 
 
@@ -93,11 +93,10 @@ function checkLetter (e) {
       // - if they match, add the "show" class to the li
       liElements[i].className = "show";
       // - if they match, store the button to text in the match variable
-      matchFound = e.target.textContent;
+      
     }
   }
-  // once the loop completes, return the match variable (NOT SURE IF THIS MUST BE
-  // IN THIS EXACT POSITION)
+  // once the loop completes, return the match variable
     return matchFound;
 };
 
@@ -116,7 +115,7 @@ qwerty.addEventListener("click", function(e) {
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
     if ( resultss === null ) {
-      document.querySelector('img').remove();
+      document.querySelector('.tries img').remove();
       missed +=1;
     }
   }
@@ -132,7 +131,6 @@ function checkWin () {
 // check if the length of the 2 variables are the same, if they are, display the
 // win overlay
   if ( liLetters.length === liShow.length ) {
-    document.getElementById("overlay").style.display = "block";
     // create the win overlay by adding the "win" class to the start overlay
     document.getElementById("overlay").className = "win";
     // change the headline text of the start overlay to show a person won
@@ -148,9 +146,8 @@ function checkWin () {
     // change the headline text of the start overlay to show a person lost
     document.getElementsByClassName("btn__reset")[0].textContent = "You lost!";
     // change the display property of the overlay to "flex"
-
+    document.getElementById("overlay").style.display = "flex";
   }
-  return checkWin();
 };
 
 
