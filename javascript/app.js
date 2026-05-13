@@ -146,7 +146,7 @@ function checkWin () {
     // create the lose overlay by adding the "lose" class to the start overlay
     document.getElementsByClassName("start")[0].className = "lose";
     // change the headline text of the start overlay to show a person lost
-   
+    document.getElementsByClassName("btn__reset")[0].textContent = "You lost!";
     // change the display property of the overlay to "flex"
 
   }
