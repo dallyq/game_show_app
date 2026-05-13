@@ -89,17 +89,18 @@ function checkLetter (e) {
   for ( let i = 0; i < liElements.length; i++ ) {
     // create a conditional that compares the text of the button parameter to 
     // the text of the li at the current index of the loop
-    if ( e.target.value ===  liElements[i] )  {
+    if ( e.target.textContent === liElements[i].textContent )  {
       // - if they match, add the "show" class to the li
-      li.className = "show";
+      liElements[i].className = "show";
       // - if they match, store the button to text in the match variable
-      matchFound = e.target.value;
+      matchFound = e.target.textContent;
     }
   }
   // once the loop completes, return the match variable (NOT SURE IF THIS MUST BE
   // IN THIS EXACT POSITION)
     return matchFound;
 };
+
 
 // ADD AN EVENT LISTENER TO THE KEYBOARD
 // start by creating an event listener for the qwerty element that listens
@@ -111,11 +112,11 @@ qwerty.addEventListener("click", function(e) {
   // add the "chosen" class to the button that was pressed
     e.target.className = "chosen";
   // call the checkLetter function & store the results in a variable
-    let resultss = checkLetter();
+    let resultss = checkLetter(e);
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
-    if ( resultss === false ) {
-      li.removeChild('img'); 
+    if ( resultss === null ) {
+      
       missed +=1;
     }
   }
@@ -125,17 +126,16 @@ qwerty.addEventListener("click", function(e) {
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
 // create a variable to store the li elements that have the class name "letter"
-  const liLetters = document.getElementByClassName('letter');
+  const liLetters = document.getElementsByClassName('letter');
 // create a variable to store the li elements that have the class name "show"
- const liShow = document.getElementByClassName('show');
-// check if the length of the 2 variables are the same, 
-// if they are, display the win overlay
+  const liShow = document.getElementsByClassName('show');
+// check if the length of the 2 variables are the same, if they are, display the
+// win overlay
   if ( liLetters.length === liShow.length ) {
-    overlay.style.display = "block";
     // create the win overlay by adding the "win" class to the start overlay
-    overlay.className = "win";
+    document.getElementById("overlay").className = "win";
     // change the headline text of the start overlay to show a person won
-    document.btn__reset.textContent = "You won!";
+    document.getElementsByClassName("btn__reset")[0].textContent = "You won!";
     // change the display property of the overlay to "flex"
     document.getElementById("overlay").style.display = "flex";
 // check if the missed counter is greater than 4. if they are, display the lose 
@@ -143,7 +143,7 @@ function checkWin () {
   }
   if ( missed > 4 ) {
     // create the lose overlay by adding the "lose" class to the start overlay
-    document.getElementsByClassName("start").className = "lose";
+    document.getElementsByClassName("start")[0].className = "lose";
     // change the headline text of the start overlay to show a person lost
    
     // change the display property of the overlay to "flex"
