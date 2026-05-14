@@ -124,12 +124,12 @@ qwerty.addEventListener("click", function(e) {
 
 // CREATE A CHECKWIN FUNCTION
 function checkWin() {
-// create a variable to store the li elements that have the class name "letter" STORES LETTERS
+// create a variable to store the li elements that have the class name "letter" 
   const liLetters = document.getElementsByClassName("letter");
-// create a variable to store the li elements that have the class name "show" SHOWS LETTERS
+// create a variable to store the li elements that have the class name "show" 
   const liShow = document.getElementsByClassName("show");
 // check if the length of the 2 variables are the same, if they are, display the
-// win overlay THEY BOTH NEED TO BE EXACT FOR IT TO SHOW WIN
+// win overlay 
   if ( liLetters.length === liShow.length ) {
     // create the win overlay by adding the "win" class to the start overlay 
     document.querySelector("#overlay").className = "win"; 
