@@ -117,7 +117,7 @@ qwerty.addEventListener("click", function(e) {
   // if the checkLetter function doesn't find a letter, remove one of the
   // heart images and increment the missed counter
     if ( resultss === null ) {
-      document.querySelector('img').remove();
+      document.querySelector("img").remove();
       missed +=1;
     }
   }
@@ -127,9 +127,9 @@ qwerty.addEventListener("click", function(e) {
 // CREATE A CHECKWIN FUNCTION
 function checkWin () {
 // create a variable to store the li elements that have the class name "letter"
-  const liLetters = document.getElementsByClassName('letter');
+  const liLetters = document.querySelectorAll(".letter");
 // create a variable to store the li elements that have the class name "show"
-  const liShow = document.getElementsByClassName('show');
+  const liShow = document.querySelectorAll(".show");
 // check if the length of the 2 variables are the same, if they are, display the
 // win overlay
   if ( liLetters.length === liShow.length ) {
