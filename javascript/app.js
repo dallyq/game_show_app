@@ -1,19 +1,19 @@
 // ADD NEEDED VARIABLES
-// get the element with the id of qwerty and save it to a variable FOR LETTER BUTTONS
+// get the element with the id of qwerty and save it to a variable 
 const qwerty = document.querySelector("#qwerty");
-// get the element with the id of phrase and save it to a variable FOR UNORDERED LIST (EMPTY)
+// get the element with the id of phrase and save it to a variable 
 const phrase = document.querySelector("#phrase");
-// get the element with the class of btn__reset and save it to a variable START GAME TEXT
+// get the element with the class of btn__reset and save it to a variable 
 const btnReset = document.querySelector(".btn__reset");
 // create a missed variable, initialized to 0, that you'll use later to
 // keep track of the no of guesses the player has missed - 5 wrongs &
-// they lose GUESSES COUNTER
+// they lose
 let missed = 0;
 
 
 // CREATE AN ARRAY NAMED PHRASES
 // store at least 5 strings that contain only letters & spaces, with
-// no punctuation THIS IS WHAT PEOPLE WILL BE GUESSING
+// no punctuation 
 const phrases = [
     "Joey Tribbiani",
     "Pheobe Buffay",
@@ -25,73 +25,71 @@ const phrases = [
 
 
 // ATTACH AN EVENT LISTENER TO THE "START GAME" BUTTON TO HIDE THE START
-// SCREEN OVERLAY (THIS STARTS GAME)
-// add the event listener to the variable you created for the btn__reset HAPPENS WHEN CLICKED
+// SCREEN OVERLAY 
+// add the event listener to the variable you created for the btn__reset 
 btnReset.addEventListener("click", (e) => {
-// hide the overlay by changing its display property THIS REMOVES OVERLAY
+// hide the overlay by changing its display property 
   document.querySelector("#overlay").style.display = "none";
 });
 
 
 // CREATE A GETRANDOMPHRASEASARRAY FUNCTION
 // create a function "stub", declare function & parameters, leave function
-// blank. Add code comment to describe the purpose of function THIS MAKES THE SELECTED LETTERS RANDOM
+// blank. Add code comment to describe the purpose of function 
 function getRandomPhraseAsArray (phrases) {
   // this takes a random element from the phrases array 
   // reate a variable to store a random number based on the length of the array
   const randomNum = Math.floor(Math.random() * phrases.length); 
   // use the variable to select an index inside of the array
-  // return the array element at that index RETURNS RESULT OF FUNCTION
+  // return the array element at that index 
   return phrases[randomNum];  
 }
   // after you create getRandomPhraseAsArray, you will need to 'call' it, 
-  // & pass the phrases array to it THIS CREATES ARGUMENTS STORED INSIDE A VARIABLE
+  // & pass the phrases array to it 
 const randomPhrase = getRandomPhraseAsArray(phrases);
 
 
 // CREATE AN ADDPHRASETODISPLAY FUNCTION
 // get it to loop through an array of characters. You'll need to write it so 
-// that it can take any array of letters and add it to the display THIS JUMBLES UP WHAT IS DISPLAYED ON PAGE
+// that it can take any array of letters and add it to the display 
 function addPhraseToDisplay (arr) {
-    // inside the loop, for each character in the array: THIS LOOPS THROUGH THE ARRAY
+    // inside the loop, for each character in the array
     for ( let i = 0; i < arr.length; i++ ) {
-    // create a list li item THIS CREATES A LIST ITEM
+    // create a list li item 
     const listItem = document.createElement("li"); 
-    // put the character inside of the list item PUTS THE NAME OF CHARACTER IN LI
+    // put the character inside of the list item 
     listItem.textContent = `${arr[i]}`;
-    // append that list item to the #phrase ul in your HTML THIS PUTS THE ARRAY INTO THE PHRASE ID
+    // append that list item to the #phrase ul in your HTML 
     phrase.querySelector("ul").append(listItem); 
     // if the character in the array is a letter and not a space, the function 
     // should add the class "letter" to the list item. if not, add "space" class
     if (arr[i] !== " ") {
-      listItem.className = "letter"; // GETS STYLED AS A BLANK TILE
+      listItem.className = "letter"; 
     } else {
-      listItem.className = "space"; // GETS STYLED AS AN INVISIBLE/EMPTY GAP
+      listItem.className = "space"; 
     }
   }
 }
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
-// save it to a variable, and pass it to addPhraseToDisplay as an argument THIS GIVES
-// THE ARRAY OF CHARACTERS TO LOOP THROUGH
+// save it to a variable, and pass it to addPhraseToDisplay as an argument 
 addPhraseToDisplay(randomPhrase);
 
 
-// CREATE A CHECKLETTER FUNCTION - THE PURPOSE OF THIS IS SO THAT IT CAN DISPLAY 
+// CREATE A CHECKLETTER FUNCTION 
 // create a "stub" for the checkLetter function
   // include a parameter in the function head for the button that gets clicked 
 function checkLetter (e) {
-// store all of the li elements in a variable inside checkLetter LI CREATED FROM ADDPHRASETODISPLAY
+// store all of the li elements in a variable inside checkLetter 
   const liElements = document.querySelectorAll("li");
 // create a variable to store if a match is found & give it an initial value 
-// of null THIS IS TO KEEP TRACK OF SCORE
+// of null 
   let matchFound = null;
-// loop through all of the li elements TO GO THROUGH EACH ELEMENT
+// loop through all of the li elements 
   for ( let i = 0; i < liElements.length; i++ ) {
     // create a conditional that compares the text of the button parameter to 
-    // the text of the li at the current index of the loop THIS COMPARES YOUR ARRAY TO
-    // THE BUTTONS' PARAMETERS
+    // the text of the li at the current index of the loop 
     if ( e.target.textContent === liElements[i].textContent )  {
-      // - if they match, add the "show" class to the li THIS IS SO THAT THEY CAN BE DISPLAYED
+      // - if they match, add the "show" class to the li 
       liElements[i].classList.add("show");
       // - if they match, store the button to text in the match variable 
       matchFound = e.target.textContent;
@@ -120,11 +118,12 @@ qwerty.addEventListener("click", function(e) {
       missed +=1;
     }
   }
+  checkWin();
 });
 
 
 // CREATE A CHECKWIN FUNCTION
-function checkWin () {
+function checkWin() {
 // create a variable to store the li elements that have the class name "letter" STORES LETTERS
   const liLetters = document.getElementsByClassName("letter");
 // create a variable to store the li elements that have the class name "show" SHOWS LETTERS
@@ -150,10 +149,9 @@ function checkWin () {
     document.querySelector("#overlay").style.display = "flex";
   }
 }
-checkWin ()
+
 
 // EXTRA CREDIT
 // Add a button to the "success" & "failure" screens that resets the game
-
 
 
