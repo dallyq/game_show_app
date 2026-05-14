@@ -84,17 +84,18 @@ function checkLetter (e) {
 // store all of the li elements in a variable inside checkLetter LI CREATED FROM ADDPHRASETODISPLAY
   const liElements = document.querySelectorAll("li");
 // create a variable to store if a match is found & give it an initial value 
-// of null 
+// of null THIS IS TO KEEP TRACK OF MATCHES
   let matchFound = null;
-// loop through all of the li elements
+// loop through all of the li elements TO GO THROUGH EACH ELEMENT
   for ( let i = 0; i < liElements.length; i++ ) {
     // create a conditional that compares the text of the button parameter to 
-    // the text of the li at the current index of the loop
+    // the text of the li at the current index of the loop THIS COMPARES YOUR ARRAY TO
+    // THE BUTTONS' PARAMETERS
     if ( e.target.textContent === liElements[i].textContent )  {
-      // - if they match, add the "show" class to the li
+      // - if they match, add the "show" class to the li 
       liElements[i].className = "show";
       // - if they match, store the button to text in the match variable
-      
+      matchFound = liElements.textContent;
     }
   }
   // once the loop completes, return the match variable
