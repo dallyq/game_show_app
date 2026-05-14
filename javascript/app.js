@@ -1,10 +1,10 @@
 // ADD NEEDED VARIABLES
 // get the element with the id of qwerty and save it to a variable FOR LETTER BUTTONS
-const qwerty = document.getElementById("qwerty");
+const qwerty = document.querySelectorAll("#qwerty");
 // get the element with the id of phrase and save it to a variable FOR UNORDERED LIST (EMPTY)
-const phrase = document.getElementById("phrase");
+const phrase = document.querySelectorAll("#phrase");
 // get the element with the class of btn__reset and save it to a variable START GAME TEXT
-const btnReset = document.getElementsByClassName("btn__reset");
+const btnReset = document.querySelector(".btn__reset");
 // create a missed variable, initialized to 0, that you'll use later to
 // keep track of the no of guesses the player has missed - 5 wrongs &
 // they lose GUESSES COUNTER
@@ -61,7 +61,7 @@ function addPhraseToDisplay (arr) {
     // put the character inside of the list item PUTS THE NAME OF CHARACTER IN LI
     listItem.textContent = `${arr[i]}`;
     // append that list item to the #phrase ul in your HTML THIS PUTS THE ARRAY INTO THE PHRASE ID
-    document.getElementById("phrase").appendChild(listItem); 
+    phrase.appendChild(listItem); 
     // if the character in the array is a letter and not a space, the function 
     // should add the class "letter" to the list item. if not, add "space" class
     if (arr[i] !== " ") {
@@ -150,6 +150,7 @@ function checkWin () {
     // change the display property of the overlay to "flex"
     document.getElementById("overlay").style.display = "flex";
   }
+  checkWin();
 }
 
 
