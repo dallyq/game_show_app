@@ -143,7 +143,7 @@ function checkWin () {
   }
   if ( missed > 4 ) {
     // create the lose overlay by adding the "lose" class to the start overlay
-    document.querySelector(".start").className = "lose";
+    document.querySelector("#overlay").className = "lose";
     // change the headline text of the start overlay to show a person lost
     document.querySelector(".btn__reset").textContent = "You lost!";
     // change the display property of the overlay to "flex"
