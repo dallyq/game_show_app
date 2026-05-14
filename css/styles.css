@@ -95,6 +95,8 @@ phrase display as they are revealed on screen */
 }
 
 .show {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   color: #000;
   font-size: 25px;
   text-transform: uppercase;
