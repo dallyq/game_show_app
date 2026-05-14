@@ -134,21 +134,21 @@ function checkWin () {
 // win overlay THEY BOTH NEED TO BE EXACT FOR IT TO SHOW WIN
   if ( liLetters.length === liShow.length ) {
     // create the win overlay by adding the "win" class to the start overlay 
-    document.querySelector("#overlay").className = "win"; // CODE FOR HERE
+    document.querySelector("#overlay").className = "win"; 
     // change the headline text of the start overlay to show a person won
-    document.querySelector(".btn__reset").textContent = "You won!";
+    document.querySelector(".header").textContent = "You won!";
     // change the display property of the overlay to "flex"
-    document.getElementById("overlay").style.display = "flex";
+    document.querySelector("#overlay").style.display = "flex";
 // check if the missed counter is greater than 4. if they are, display the lose 
 // overlay
   }
   if ( missed > 4 ) {
     // create the lose overlay by adding the "lose" class to the start overlay
-    document.getElementsByClassName("start")[0].className = "lose";
+    document.querySelector(".start").className = "lose";
     // change the headline text of the start overlay to show a person lost
-    document.getElementsByClassName("btn__reset")[0].textContent = "You lost!";
+    document.querySelector(".btn__reset").textContent = "You lost!";
     // change the display property of the overlay to "flex"
-    document.getElementById("overlay").style.display = "flex";
+    document.querySelector("#overlay").style.display = "flex";
   }
   checkWin();
 }
