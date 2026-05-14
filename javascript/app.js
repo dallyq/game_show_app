@@ -83,7 +83,7 @@ function checkLetter (e) {
 // store all of the li elements in a variable inside checkLetter LI CREATED FROM ADDPHRASETODISPLAY
   const liElements = document.querySelectorAll("li");
 // create a variable to store if a match is found & give it an initial value 
-// of null THIS IS TO KEEP TRACK OF MATCHES
+// of null THIS IS TO KEEP TRACK OF SCORE
   let matchFound = null;
 // loop through all of the li elements TO GO THROUGH EACH ELEMENT
   for ( let i = 0; i < liElements.length; i++ ) {
@@ -92,7 +92,7 @@ function checkLetter (e) {
     // THE BUTTONS' PARAMETERS
     if ( e.target.textContent === liElements[i].textContent )  {
       // - if they match, add the "show" class to the li THIS IS SO THAT THEY CAN BE DISPLAYED
-      liElements[i].className = "show";
+      liElements[i].classList.add("show");
       // - if they match, store the button to text in the match variable 
       matchFound = e.target.textContent;
     }
