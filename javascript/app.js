@@ -1,8 +1,8 @@
 // ADD NEEDED VARIABLES
 // get the element with the id of qwerty and save it to a variable FOR LETTER BUTTONS
-const qwerty = document.querySelectorAll("#qwerty");
+const qwerty = document.querySelector("#qwerty");
 // get the element with the id of phrase and save it to a variable FOR UNORDERED LIST (EMPTY)
-const phrase = document.querySelectorAll("#phrase");
+const phrase = document.querySelector("#phrase");
 // get the element with the class of btn__reset and save it to a variable START GAME TEXT
 const btnReset = document.querySelector(".btn__reset");
 // create a missed variable, initialized to 0, that you'll use later to
@@ -26,9 +26,8 @@ const phrases = [
 
 // ATTACH AN EVENT LISTENER TO THE "START GAME" BUTTON TO HIDE THE START
 // SCREEN OVERLAY (THIS STARTS GAME)
-const startButton = btnReset;
 // add the event listener to the variable you created for the btn__reset HAPPENS WHEN CLICKED
-startButton.addEventListener("click", (e) => {
+btnReset.addEventListener("click", (e) => {
 // hide the overlay by changing its display property THIS REMOVES OVERLAY
   document.querySelector("#overlay").style.display = "none";
 });
@@ -61,7 +60,7 @@ function addPhraseToDisplay (arr) {
     // put the character inside of the list item PUTS THE NAME OF CHARACTER IN LI
     listItem.textContent = `${arr[i]}`;
     // append that list item to the #phrase ul in your HTML THIS PUTS THE ARRAY INTO THE PHRASE ID
-    phrase.appendChild(listItem); 
+    phrase.append(listItem); 
     // if the character in the array is a letter and not a space, the function 
     // should add the class "letter" to the list item. if not, add "space" class
     if (arr[i] !== " ") {
@@ -150,9 +149,9 @@ function checkWin () {
     // change the display property of the overlay to "flex"
     document.querySelector("#overlay").style.display = "flex";
   }
-  checkWin();
 }
 
+checkWin ()
 
 // EXTRA CREDIT
 // Add a button to the "success" & "failure" screens that resets the game
