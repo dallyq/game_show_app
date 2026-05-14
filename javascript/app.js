@@ -110,7 +110,7 @@ qwerty.addEventListener("click", function(e) {
 // or if the button already has the "chosen" class
   if ( e.target.tagName === "BUTTON" && e.target.className !== "chosen" ) {
   // add the "chosen" class to the button that was pressed
-    e.target.className = "chosen";
+    e.target.classList.add("chosen");
   // call the checkLetter function & store the results in a variable
     let resultss = checkLetter(e);
   // if the checkLetter function doesn't find a letter, remove one of the
@@ -150,7 +150,6 @@ function checkWin () {
     document.querySelector("#overlay").style.display = "flex";
   }
 }
-
 checkWin ()
 
 // EXTRA CREDIT
