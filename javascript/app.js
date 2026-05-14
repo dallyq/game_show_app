@@ -26,7 +26,7 @@ const phrases = [
 
 // ATTACH AN EVENT LISTENER TO THE "START GAME" BUTTON TO HIDE THE START
 // SCREEN OVERLAY (THIS STARTS GAME)
-const startButton = document.querySelector(".btn__reset");
+const startButton = btnReset;
 // add the event listener to the variable you created for the btn__reset HAPPENS WHEN CLICKED
 startButton.addEventListener("click", (e) => {
 // hide the overlay by changing its display property THIS REMOVES OVERLAY
@@ -70,7 +70,7 @@ function addPhraseToDisplay (arr) {
       listItem.className = "space"; // GETS STYLED AS AN INVISIBLE/EMPTY GAP
     }
   }
-};
+}
 // to use the function, you'll get the value returned by the getRandomPhraseAsArray,
 // save it to a variable, and pass it to addPhraseToDisplay as an argument THIS GIVES
 // THE ARRAY OF CHARACTERS TO LOOP THROUGH
@@ -92,15 +92,15 @@ function checkLetter (e) {
     // the text of the li at the current index of the loop THIS COMPARES YOUR ARRAY TO
     // THE BUTTONS' PARAMETERS
     if ( e.target.textContent === liElements[i].textContent )  {
-      // - if they match, add the "show" class to the li 
+      // - if they match, add the "show" class to the li THIS IS SO THAT THEY CAN BE DISPLAYED
       liElements[i].className = "show";
-      // - if they match, store the button to text in the match variable
-      matchFound = liElements.textContent;
+      // - if they match, store the button to text in the match variable 
+      matchFound = e.target.textContent;
     }
   }
   // once the loop completes, return the match variable
     return matchFound;
-};
+}
 
 
 // ADD AN EVENT LISTENER TO THE KEYBOARD
@@ -150,7 +150,7 @@ function checkWin () {
     // change the display property of the overlay to "flex"
     document.getElementById("overlay").style.display = "flex";
   }
-};
+}
 
 
 // EXTRA CREDIT
