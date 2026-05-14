@@ -15,12 +15,12 @@ let missed = 0;
 // store at least 5 strings that contain only letters & spaces, with
 // no punctuation 
 const phrases = [
-    "Joey Tribbiani",
-    "Pheobe Buffay",
-    "Chandler Bing",
-    "Monica Geller",
-    "Rachel Green",
-    "Ross Geller"
+    "joey tribbiani",
+    "pheobe buffay",
+    "chandler bing",
+    "monica geller",
+    "rachel green",
+    "ross geller"
 ];
 
 
@@ -153,5 +153,4 @@ function checkWin() {
 
 // EXTRA CREDIT
 // Add a button to the "success" & "failure" screens that resets the game
-
 
