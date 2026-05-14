@@ -96,7 +96,8 @@ phrase display as they are revealed on screen */
 
 .show {
   color: #000;
-  background-color: #76CE82;
+  font-size: 25px;
+  text-transform: uppercase;
 }
 
 /* Keyboard */
