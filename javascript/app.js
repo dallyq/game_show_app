@@ -15,12 +15,12 @@ let missed = 0;
 // store at least 5 strings that contain only letters & spaces, with
 // no punctuation 
 const phrases = [
-    "joey tribbiani",
-    "pheobe buffay",
-    "chandler bing",
-    "monica geller",
-    "rachel green",
-    "ross geller"
+    "Joey Tribbiani",
+    "Pheobe Buffay",
+    "Chandler Bing",
+    "Monica Geller",
+    "Rachel Green",
+    "Ross Geller"
 ];
 
 
@@ -88,7 +88,7 @@ function checkLetter (e) {
   for ( let i = 0; i < liElements.length; i++ ) {
     // create a conditional that compares the text of the button parameter to 
     // the text of the li at the current index of the loop 
-    if ( e.target.textContent === liElements[i].textContent )  {
+    if ( e.target.textContent === liElements[i].textContent.toLowerCase() )  {
       // - if they match, add the "show" class to the li 
       liElements[i].classList.add("show");
       // - if they match, store the button to text in the match variable 
