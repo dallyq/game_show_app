@@ -37,8 +37,8 @@ btnReset.addEventListener("click", (e) => {
 // create a function "stub", declare function & parameters, leave function
 // blank. Add code comment to describe the purpose of function THIS MAKES THE SELECTED LETTERS RANDOM
 function getRandomPhraseAsArray (phrases) {
-  // This takes a random element from the phrases array create a variable 
-  // to store a random number based on the length of the array RANDOMIZES
+  // this takes a random element from the phrases array 
+  // reate a variable to store a random number based on the length of the array
   const randomNum = Math.floor(Math.random() * phrases.length); 
   // use the variable to select an index inside of the array
   // return the array element at that index RETURNS RESULT OF FUNCTION
@@ -60,7 +60,7 @@ function addPhraseToDisplay (arr) {
     // put the character inside of the list item PUTS THE NAME OF CHARACTER IN LI
     listItem.textContent = `${arr[i]}`;
     // append that list item to the #phrase ul in your HTML THIS PUTS THE ARRAY INTO THE PHRASE ID
-    phrase.append(listItem); 
+    phrase.querySelector("ul").append(listItem); 
     // if the character in the array is a letter and not a space, the function 
     // should add the class "letter" to the list item. if not, add "space" class
     if (arr[i] !== " ") {
